@@ -18,3 +18,6 @@ se passate abbastanza tempo a leggere la documentazione il 99% delle volte otter
 - Versione Web: [PayloadsAllTheThings - Web Version](https://swisskyrepo.github.io/PayloadsAllTheThings/)
 
 PayloadsAllTheThings è una vasta raccolta di payload per diverse tecnologie e contesti, utile per testare le applicazioni anche in ambito CTF.
+
+### BURPSUITE
+Scaricate BurpSuite Community, è essenziale per chi fa WebSecuiryt
