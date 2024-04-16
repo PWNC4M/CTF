@@ -30,6 +30,12 @@ Supponiamo che Bob sia autenticato su un sito web di banca online. L'attaccante 
 
 Senza che Bob sia consapevole di ciò, il denaro viene trasferito dal suo conto a quello dell' attaccante. Non è che raro che questo avvenga tramite XSS, capita spesso che nelle challenge jeopardy bisogni effettuare un attacco CSRF+XSS
 
+Di seguito un piccolo payload che permette di eseguire CSRF tramite XSS: 
+
+```
+<img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">
+```
+
 # CSRF Token
 Per prevenire gli attacchi CSRF, è fondamentale implementare misure di sicurezza come l'utilizzo di token CSRF univoci per ogni richiesta.
 Chi costruisce il payload non può (o non dovrebbe) conoscere questi token, se viene effettuata una richiesta ad un endpoint senza un CSRF token valido questa richiesta viene rifiutata.
