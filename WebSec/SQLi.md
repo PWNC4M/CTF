@@ -72,14 +72,25 @@ SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
 ```
 # UNION
 Union è un costrutto che permette di eseguire più query completamente. Nel caso in cui avessimo SQLi, ma su una query che non ci restituisce niente di utile, possiamo usarlo per creare una nuova query che esegua quello che vogliamo: 
+```
 ' UNION SELECT username, password FROM users--
-L' unico problema della UNION è che il numero di colonne stampate dalla UNION SELECT deve equivalere a quello della SELECT precedente, possiamo ovviare a questo problema stampando numeri casuali, o usare operatori come CONCAT(). 
+```
+L' unico problema della UNION è che il numero di colonne stampate dalla ``` UNION SELECT ```deve equivalere a quello della SELECT precedente, possiamo ovviare a questo problema stampando numeri casuali, o usare operatori come ``` CONCAT() ```. 
 Ottenere Informazioni
 Possiamo ottenere informazioni sul databse in svariati modi, per esempio facendoci stampare la versione relativo ad esso. Questo può servirci per sapere su che database lavoriamo, in quanto ogni tipo di database avrà sintassi differenti (in base ai comandi) e quindi quando non avremo un errore sapremo su che database lavoriamo. Inoltre ci è molto utile la tabella information_schema
-da cui possiamo ottenere le tabelle: SELECT * FROM information_schema.tables
-le colonne: SELECT * FROM information_schema.columns e ovviamente anche le colonne di una certa tabella. Trovate le tecniche per esaminare un database in : 
+da cui possiamo ottenere le tabelle: 
+```
+SELECT * FROM information_schema.tables
+```
+le colonne:
+```
+SELECT * FROM information_schema.columns e ovviamente anche le colonne di una certa tabella.
+```
+Trovate le tecniche per esaminare un database in : 
+ [PortSwigger - Esaminare il Database]([https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/examining-the-database))
 
 Di seguito trovate anche un cheat-sheet per le SQLi: 
+[PortSwigger - SQLi cheat sheet]([https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/cheat-sheet))
 
 # Blind
-Non sempre (quasi mai) il risultato delle query verrà stampato per intero. In questo caso possiamo usare l' operatore LIKE (o equivalenti) , assieme ad una SLEEP per  avere un oracolo da cui capire se l' informazione che stiamo cercando è presente o meno nel database
+Non sempre (quasi mai) il risultato delle query verrà stampato per intero. In questo caso possiamo usare l' operatore ```LIKE``` (o equivalenti) , assieme ad una ```SLEEP``` per  avere un oracolo da cui capire se l' informazione che stiamo cercando è presente o meno nel database
