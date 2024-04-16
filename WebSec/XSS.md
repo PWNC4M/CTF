@@ -74,7 +74,6 @@ Esistono delle funzioni per sanificare l'input, le piu comuni sono :
 ```
 htmlentities
 ENT_QUOTES
-
 ```
 Ma non è detto che bastino. Visitate le best practice nella doc del vostro linguaggio/framework e testate il sito per capire se la sanificazione è stata effettuata correttamente.
 
