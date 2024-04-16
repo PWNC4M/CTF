@@ -1,6 +1,6 @@
 Consiglio di non usare sqlmap, prima cercate di capire cosa avviene
 
-##SQLi
+# SQLi
 L'SQL injection è una vulnerabilità di sicurezza che si verifica quando un'applicazione web non sanifica correttamente l'input dell'utente prima di utilizzarlo in una query SQL. Questo consente di inserire codice SQL nelle query per manipolare il database o ottenere informazioni sensibili.
 ESEMPI DI CODICE 
 Di seguito troviamo, in vari linguaggi, degli esempi di codice vulnerabili:
@@ -47,12 +47,14 @@ $result = $stmt->get_result();
 $user_data = $result->fetch_assoc();
 ```
 
-##Exploit
+# Exploit
  Potete trovare exploit SQL ovunque, generalmente basta essere a conoscenza della tabella information_schema (una tabella che permette di ottenere informazioni sul databse tra cui il nome delle tabelle e il nome delle colonne) e saper costruire delle query SQL. Per trovare delle SQL injection si può inserire il carattere ' che romperà la query nel caso in cui ci sia una injection. Questo perchè la query costruita nel backend terminerà in questo modo: 
 Query...... Where password = ''' 
 Il nostro apostrofo chiude la query, generando un errore per via dell'ultimo apostrofo presente che è quello che racchiude i nostri dati
 Ricordate che: L' apostrofo finale è sempre presente, potete commentarlo e costruire la vostra query gestendo la chiusura di essa, o sfruttarlo, generalmente è meglio commentarlo per non scordarsi di esso. I commenti standard (possono dipendere dal tipo di Database) sono # e -- (-- genera un errore se non è presente uno spazio subito dopo). È buona prassi eseguire una SQLi di questo tipo: QUERY PAYLOAD -- (commenta il resto)
-Payload Alcuni payload sono:``` ' OR '1'='1'
+Payload Alcuni payload sono:
+```
+' OR '1'='1'
 https://insecure-website.com/products?category=Gifts'-- (il payload è 
 Gifts'-- ) 
 per poter accedere a tutti i regali, tramite la query risultante: 
@@ -60,7 +62,7 @@ SELECT * FROM products WHERE category = 'Gifts'--' AND released = 1
 O per esempio: 
 SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
 ```
-##UNION
+# UNION
 Union è un costrutto che permette di eseguire più query completamente. Nel caso in cui avessimo SQLi, ma su una query che non ci restituisce niente di utile, possiamo usarlo per creare una nuova query che esegua quello che vogliamo: 
 ' UNION SELECT username, password FROM users--
 L' unico problema della UNION è che il numero di colonne stampate dalla UNION SELECT deve equivalere a quello della SELECT precedente, possiamo ovviare a questo problema stampando numeri casuali, o usare operatori come CONCAT(). 
@@ -71,5 +73,5 @@ le colonne: SELECT * FROM information_schema.columns e ovviamente anche le colon
 
 Di seguito trovate anche un cheat-sheet per le SQLi: 
 
-##Blind
+# Blind
 Non sempre (quasi mai) il risultato delle query verrà stampato per intero. In questo caso possiamo usare l' operatore LIKE (o equivalenti) , assieme ad una SLEEP per  avere un oracolo da cui capire se l' informazione che stiamo cercando è presente o meno nel database
