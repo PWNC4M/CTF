@@ -15,5 +15,5 @@ Consiglio di consultare sempre la documentazione delle funzioni che non si conos
 - Repository GitHub: [PayloadsAllTheThings - GitHub Repository](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master)
 - Versione Web: [PayloadsAllTheThings - Web Version](https://swisskyrepo.github.io/PayloadsAllTheThings/)
 
-PayloadsAllTheThings è una vasta raccolta di payload per diverse tecnologie e contesti, utile per testare la sicurezza di applicazioni web e scoprire potenziali vulnerabilità.
+PayloadsAllTheThings è una vasta raccolta di payload per diverse tecnologie e contesti, utile per testare le applicazioni anche in ambito CTF.
 
