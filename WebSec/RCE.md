@@ -18,11 +18,14 @@ Assumento che si possa anche caricare un file che venga poi eseguito è possibil
 <?php echo shell_exec($_GET['cmd']); ?>
 ```
 Che ci permette, una volta che ci siamo posizionati sul file che abbiamo caricato, di eseguire dei comandi arbitrari tramite il parametro ```?cmd=phpinfo()```
+
 Nelle CTF può capitare che ,al posto di sanificare l'input, venga proposta una blacklist per cercare di evitare un certo tipo di attacco. Questo è generalmente sbagliato e ci sono vari modi per bypassare questi controlli. 
 
 # BYPASS DELLO SPAZIO
 Uno dei bypass più comuni da effettuare è quello del blocco di spazi nei comandi che si vogliono eseguire, generlamente ```${IFS} e $IFS``` ci permettono di rappresentare lo spazio nella maggior parte delle shell.
-Tenete sempre conto del fatto che passare il payload nell'url può dare problemi per via dell'URL Encode(in certi casi permette di effettuare dei bypass) e che molte informazioni possono essere rappresentate in Base64
+
+Tenete sempre conto del fatto che passare il payload nell'url può dare problemi per via dell'URL Encode(in certi casi permette di effettuare dei bypass) e che molte informazioni possono essere rappresentate in Base64.
+
 Come già detto cercate di capire il sistema che avete davanti e siate creativi, a volte basta un po' di creatività per ottenere la flag, per esempio con payload del tipo: 
 ```
 w'h'o'am'i
