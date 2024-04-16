@@ -87,10 +87,10 @@ le colonne:
 SELECT * FROM information_schema.columns e ovviamente anche le colonne di una certa tabella.
 ```
 Trovate le tecniche per esaminare un database in : 
- [PortSwigger - Esaminare il Database]([https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/examining-the-database))
+ [PortSwigger - Esaminare il Database](https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/examining-the-database)
 
 Di seguito trovate anche un cheat-sheet per le SQLi: 
-[PortSwigger - SQLi cheat sheet]([https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/cheat-sheet))
+[PortSwigger - SQLi cheat sheet](https://portswigger.net/web-security/all-topics](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
 # Blind
 Non sempre (quasi mai) il risultato delle query verrà stampato per intero. In questo caso possiamo usare l' operatore ```LIKE``` (o equivalenti) , assieme ad una ```SLEEP``` per  avere un oracolo da cui capire se l' informazione che stiamo cercando è presente o meno nel database
