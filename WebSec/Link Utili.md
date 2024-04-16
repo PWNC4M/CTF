@@ -1,5 +1,3 @@
-# Risorse per la Sicurezza Web
-
 ## PortSwigger - Web Security - All Topics
 [PortSwigger - Web Security - All Topics](https://portswigger.net/web-security/all-topics)
 
