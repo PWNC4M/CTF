@@ -48,16 +48,24 @@ $user_data = $result->fetch_assoc();
 ```
 
 # Exploit
- Potete trovare exploit SQL ovunque, generalmente basta essere a conoscenza della tabella information_schema (una tabella che permette di ottenere informazioni sul databse tra cui il nome delle tabelle e il nome delle colonne) e saper costruire delle query SQL. Per trovare delle SQL injection si può inserire il carattere ' che romperà la query nel caso in cui ci sia una injection. Questo perchè la query costruita nel backend terminerà in questo modo: 
-Query...... Where password = ''' 
+ Potete trovare exploit SQL ovunque, generalmente basta essere a conoscenza della tabella ```information_schema ``` (una tabella che permette di ottenere informazioni sul databse tra cui il nome delle tabelle e il nome delle colonne) e saper costruire delle query SQL. Per trovare delle SQL injection si può inserire il carattere ``` ' ``` che romperà la query nel caso in cui ci sia una injection. Questo perchè la query costruita nel backend terminerà in questo modo: 
+```
+Query...... Where password = '''
+```
 Il nostro apostrofo chiude la query, generando un errore per via dell'ultimo apostrofo presente che è quello che racchiude i nostri dati
-Ricordate che: L' apostrofo finale è sempre presente, potete commentarlo e costruire la vostra query gestendo la chiusura di essa, o sfruttarlo, generalmente è meglio commentarlo per non scordarsi di esso. I commenti standard (possono dipendere dal tipo di Database) sono # e -- (-- genera un errore se non è presente uno spazio subito dopo). È buona prassi eseguire una SQLi di questo tipo: QUERY PAYLOAD -- (commenta il resto)
-Payload Alcuni payload sono:
+Ricordate che: L' apostrofo finale è sempre presente, potete commentarlo e costruire la vostra query gestendo la chiusura di essa, o sfruttarlo, generalmente è meglio commentarlo per non scordarsi di esso. I commenti standard (possono dipendere dal tipo di Database) sono ``` # e -- ```(-- genera un errore se non è presente uno spazio subito dopo). È buona prassi eseguire una SQLi di questo tipo:
+```
+QUERY PAYLOAD -- (commenta il resto)
+```
+# Payload 
+Alcuni payload di esempio sono:
 ```
 ' OR '1'='1'
 https://insecure-website.com/products?category=Gifts'-- (il payload è 
-Gifts'-- ) 
+Gifts'-- )
+```
 per poter accedere a tutti i regali, tramite la query risultante: 
+```
 SELECT * FROM products WHERE category = 'Gifts'--' AND released = 1
 O per esempio: 
 SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
