@@ -71,7 +71,7 @@ O per esempio:
 SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
 ```
 # UNION
-Union è un costrutto che permette di eseguire più query completamente. Nel caso in cui avessimo SQLi, ma su una query che non ci restituisce niente di utile, possiamo usarlo per creare una nuova query che esegua quello che vogliamo: 
+UNION è un comando SQL che permette di eseguire più SELECT contemporaneamente. Nel caso in cui avessimo SQLi, ma su una query che non ci restituisce niente di utile, possiamo usarlo per creare una nuova query che esegua quello che vogliamo: 
 ```
 ' UNION SELECT username, password FROM users--
 ```
