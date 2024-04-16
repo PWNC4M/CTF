@@ -1,15 +1,21 @@
-Generalmente, ogni vulnerabilità da facile ad avanzata viene spiegata (+ VulnBox e Certificazione) in:
+# Risorse per la Sicurezza Web
 
-PortSwigger - Web Security - All Topics
+## PortSwigger - Web Security - All Topics
+[PortSwigger - Web Security - All Topics](https://portswigger.net/web-security/all-topics)
 
-Le tecniche più comuni per il bypass di WAF (Web Application Firewall) e blacklist vengono pubblicate in:
+Qui troverai spiegazioni su vulnerabilità web da livello facile ad avanzato, inclusi esempi pratici, VulnBox e materiale per certificazioni.
 
-HackTricks - Web
+## HackTricks - Web
+[HackTricks - Web](https://book.hacktricks.xyz/)
 
-Consiglio comunque di guardare sempre la documentazione delle funzioni che non si conoscono, dopodiché cercare dei paper che mostrino bypass conosciuti che servono al vostro scopo. Se sapete già cosa cercate vi sarà utile:
+HackTricks pubblica tecniche comuni per il bypass di WAF (Web Application Firewall) e blacklist. È una risorsa utile per comprendere e superare le misure di sicurezza web.
 
-PayloadsAllTheThings - GitHub Repository
+## Documentazione delle Funzioni e Paper di Bypass
+Consiglio di consultare sempre la documentazione delle funzioni che non si conoscono, e successivamente cercare paper che mostrino bypass noti che possano essere utili per il proprio scopo.
 
-La cui versione web è:
+## PayloadsAllTheThings
+- Repository GitHub: [PayloadsAllTheThings - GitHub Repository](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master)
+- Versione Web: [PayloadsAllTheThings - Web Version](https://swisskyrepo.github.io/PayloadsAllTheThings/)
 
-PayloadsAllTheThings - Web Version
+PayloadsAllTheThings è una vasta raccolta di payload per diverse tecnologie e contesti, utile per testare la sicurezza di applicazioni web e scoprire potenziali vulnerabilità.
+
