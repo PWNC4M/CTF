@@ -92,7 +92,9 @@ Trovate le tecniche per esaminare un database in :
 
 
 Di seguito trovate anche un cheat-sheet per le SQLi: 
+
 [PortSwigger - SQLi cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+
 
 # Blind
 Non sempre (quasi mai) il risultato delle query verrà stampato per intero. In questo caso possiamo usare l' operatore ```LIKE``` (o equivalenti) , assieme ad una ```SLEEP``` per  avere un oracolo da cui capire se l' informazione che stiamo cercando è presente o meno nel database
