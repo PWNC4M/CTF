@@ -19,5 +19,5 @@ se passate abbastanza tempo a leggere la documentazione il 99% delle volte otter
 
 PayloadsAllTheThings è una vasta raccolta di payload per diverse tecnologie e contesti, utile per testare le applicazioni anche in ambito CTF.
 
-### BURPSUITE
-Scaricate BurpSuite Community, è essenziale per chi fa WebSecuiryt
+# BurpSuite
+Scaricate BurpSuite Community, è essenziale per chi fa WebSecurity
