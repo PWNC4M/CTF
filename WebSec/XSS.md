@@ -59,7 +59,6 @@ In questi casi è importante capire (sopratutto nelle CTF) che tipo di bypass bi
 
 ```
 alert`1`
-
 ```
 Dato un certo blocco è molto probabile che voi riusciate a trovare un metodo per rendere lo script eseguibile, basta saperlo cercare. (ATTENZIONE all'header CSP nelle richieste)
 
