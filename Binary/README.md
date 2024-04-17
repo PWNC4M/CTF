@@ -1,5 +1,5 @@
 # PwnCollege
-Permette di esercitarsi su software security, da livelli più bassi della CyberChallenge fino a superarla (es: Kernel pwn). 
+Permette di esercitarsi su software security, da livelli più bassi della CyberChallenge fino a superarla (es: Kernel pwn) 
 
 Inoltre trovate video di spiegazione ed introduzione alle vulnerabilità:
 
