@@ -1,7 +1,8 @@
 # PwnCollege
-[PwnCollege](www.pwn.college) 
 Permette di esercitarsi su software security, da livelli più bassi della CyberChallenge fino a superarla (es: Kernel pwn). 
-Inoltre trovate video di spiegazione ed introduzione alle vulnerabilità
+Inoltre trovate video di spiegazione ed introduzione alle vulnerabilità:
+
+[PwnCollege](www.pwn.college) 
 
 # Repository e Paper
 Esistono infinite repository e paper per l'exploit in binary security, fare molte pwn è l'unica cosa che vi migliorerà. 
