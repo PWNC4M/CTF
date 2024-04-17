@@ -52,4 +52,4 @@ Tassivamente con l'estensione:
 
 # Sito che indica la versione della libc dato un leak
 
-[64 bit](https://libc.rip/)
+[Libc Database](https://libc.rip/)
