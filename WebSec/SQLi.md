@@ -2,11 +2,12 @@ Consiglio di non usare sqlmap, prima cercate di capire cosa avviene
 
 # SQLi
 L'SQL injection è una vulnerabilità di sicurezza che si verifica quando un'applicazione web non sanifica correttamente l'input dell'utente prima di utilizzarlo in una query SQL. Questo consente di inserire codice SQL nelle query per manipolare il database o ottenere informazioni sensibili.
-ESEMPI DI CODICE 
+
+# ESEMPI DI CODICE 
 Di seguito troviamo, in vari linguaggi, degli esempi di codice vulnerabili:
+```
 import sqlite3
 
-```
 def get_user_data(username):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
@@ -27,7 +28,9 @@ $query = "SELECT * FROM users WHERE username = '$username'";
 $result = $mysqli->query($query);
 $user_data = $result->fetch_assoc();
 ?>
+```
 Query che non ha presente SQLi(python):
+```
 def get_user_data_safe(username):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
@@ -48,7 +51,8 @@ $user_data = $result->fetch_assoc();
 ```
 
 # Exploit
- Potete trovare exploit SQL ovunque, generalmente basta essere a conoscenza della tabella ```information_schema ``` (una tabella che permette di ottenere informazioni sul databse tra cui il nome delle tabelle e il nome delle colonne) e saper costruire delle query SQL. Per trovare delle SQL injection si può inserire il carattere ``` ' ``` che romperà la query nel caso in cui ci sia una injection. Questo perchè la query costruita nel backend terminerà in questo modo: 
+ Potete trovare exploit SQL ovunque, generalmente basta essere a conoscenza della tabella ```information_schema ``` (una tabella che permette di ottenere informazioni sul databse tra cui il nome delle tabelle e il nome delle colonne) e saper costruire delle query SQL. Per trovare delle SQL injection si può inserire il carattere ``` ' ``` che romperà la query nel caso in cui ci sia una injection.
+ Questo perchè la query costruita nel backend terminerà in questo modo: 
 ```
 Query...... Where password = '''
 ```
@@ -77,14 +81,18 @@ UNION è un comando SQL che permette di eseguire più SELECT contemporaneamente.
 ```
 L' unico problema della UNION è che il numero di colonne stampate dalla ``` UNION SELECT ```deve equivalere a quello della SELECT precedente, possiamo ovviare a questo problema stampando numeri casuali, o usare operatori come ``` CONCAT() ```. 
 Ottenere Informazioni
-Possiamo ottenere informazioni sul databse in svariati modi, per esempio facendoci stampare la versione relativo ad esso. Questo può servirci per sapere su che database lavoriamo, in quanto ogni tipo di database avrà sintassi differenti (in base ai comandi) e quindi quando non avremo un errore sapremo su che database lavoriamo. Inoltre ci è molto utile la tabella information_schema
+Possiamo ottenere informazioni sul databse in svariati modi, per esempio facendoci stampare la versione relativo ad esso. Questo può servirci per sapere su che database lavoriamo, in quanto ogni tipo di database avrà sintassi differenti (in base ai comandi) e quindi quando non avremo un errore sapremo su che database lavoriamo. Inoltre ci è molto utile la tabella ``` information_schema```
 da cui possiamo ottenere le tabelle: 
 ```
 SELECT * FROM information_schema.tables
 ```
 le colonne:
 ```
-SELECT * FROM information_schema.columns e ovviamente anche le colonne di una certa tabella.
+SELECT * FROM information_schema.columns
+```
+ e ovviamente anche le colonne di una certa tabella con 
+```
+ WHERE table_name = 'TABLE'.
 ```
 Trovate le tecniche per esaminare un database in : 
 
