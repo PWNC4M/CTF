@@ -41,3 +41,15 @@ Tassivamente con l'estensione:
 [PwnDBG](https://github.com/pwndbg/pwndbg)
 
 [GDB Comandi Utili](https://docencia.ac.upc.edu/FIB/grau/CASO/lab2014/gdb-debug.pdf)
+
+# Lista delle syscall 
+
+[64 bit](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
+
+[32 bit](https://x86.syscall.sh/)
+
+[Tutte le syscall](https://syscalls.w3challs.com/)
+
+# Sito che indica la versione della libc dato un leak
+
+[64 bit](https://libc.rip/)
