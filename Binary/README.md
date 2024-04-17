@@ -5,9 +5,11 @@ Inoltre trovate video di spiegazione ed introduzione alle vulnerabilità
 
 # Repository e Paper
 Esistono infinite repository e paper per l'exploit in binary security, fare molte pwn è l'unica cosa che vi migliorerà. 
+
 Una Repo che ho trovato interessante è: 
 
 [Binary Sec Repository](https://ir0nstone.gitbook.io/notes) 
+
 Sono presente anche Heap e Kernel, ma la CC si ferma al pwn dello Stack(32 e 64 bit)(X86 equivale a dire 64 bit)
 
 Vi linko anche: 
