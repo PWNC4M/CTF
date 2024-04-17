@@ -21,6 +21,12 @@ Non tratta solo pwn, vi consiglio di guardare reverse e binary exploitation.
 Conoscere determinate funzione assembly è molto consigliato, trovate un crash course qui (niente di pesante ne di programmazione) :
 [Assembly Crash Course](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://medium.com/reverse-engineering-for-dummies/a-crash-course-in-assembly-language-695b07995b4d&ved=2ahUKEwiqvt_Q98iFAxWj3gIHHSTaB8AQFnoECBMQAQ&usg=AOvVaw33Q7YbBMyZzQGxU5SjybNr)
 
+Dovete necessariamente conoscere il funzionamento dello Stack (64 bit si basa su 32 ma con i registri)
+
+Qui trovate un video che spiega il funzionamento dello stack:
+
+[Stack](https://www.youtube.com/watch?v=5iQkR69H_1M)
+
 # Debugger
 
 Vi consiglio di scaricare:
