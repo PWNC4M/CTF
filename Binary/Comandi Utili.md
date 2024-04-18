@@ -14,5 +14,4 @@ base = leak() - leak_off
 gadget1 = base + gadget1_off
 gadget2 = base + gadget2_off
 ecc....
-
 ```
