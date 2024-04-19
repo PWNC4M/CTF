@@ -15,3 +15,8 @@ gadget1 = base + gadget1_off
 gadget2 = base + gadget2_off
 ecc....
 ```
+# Linux
+Puoi vedere le librerie caricate dinamicamente (quindi anche la libc) dtramite il comando:
+```
+ldd <file_name>
+```
