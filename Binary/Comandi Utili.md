@@ -20,3 +20,7 @@ Puoi vedere le librerie caricate dinamicamente (quindi anche la libc) dtramite i
 ```
 ldd <file_name>
 ```
+Per vedere informazioni sul file (stripped, not stripped, architettura) puoi usare:
+```
+file <nome_file>
+```
