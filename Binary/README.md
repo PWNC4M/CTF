@@ -12,7 +12,7 @@ Una Repo che ho trovato interessante è:
 
 [Binary Sec Repository](https://ir0nstone.gitbook.io/notes) 
 
-Sono presente anche Heap e Kernel, ma la CC si ferma al pwn dello Stack(32 e 64 bit)(X86 equivale a dire 64 bit)
+Sono presente anche Heap e Kernel, ma la CC si ferma al pwn dello Stack
 
 Vi linko anche: 
 
