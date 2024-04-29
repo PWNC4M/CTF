@@ -53,3 +53,6 @@ Tassivamente con l'estensione:
 # Sito che indica la versione della libc dato un leak
 
 [Libc Database](https://libc.rip/)
+
+# Passaggio degli argomenti a 64 bit:
+RDI, RSI, RDX, RCX, R8, R9, ..., RSP + 0x10 + (i-6)*8
