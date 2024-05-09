@@ -7,7 +7,7 @@ Ricerca una striga (di solito la shell) per ottenerne l'indirizzo:
 ```
 
 # Leak
-I leak, ottenuti in qualsiasi modo, vanno eseguiti nel seguente modo:
+I leak, ottenuti in qualsiasi modo, vanno calcolati nel seguente modo:
 
 ```
 base = leak() - leak_off
